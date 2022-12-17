@@ -14,6 +14,13 @@
     "make": "electron-forge make"
   },
   "dependencies": {
+    "@codemirror/commands": "^6.1.2",
+    "@codemirror/gutter": "^0.19.9",
+    "@codemirror/highlight": "^0.19.8",
+    "@codemirror/lang-javascript": "^6.1.2",
+    "@codemirror/language": "^6.3.2",
+    "@codemirror/matchbrackets": "^0.19.4",
+    "@codemirror/state": "^6.1.4",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
