@@ -12,6 +12,9 @@ const isDev = process.env.IS_DEV === 'true';
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    vibrancy: 'under-window',
+    transparent:true,
+    visualEffectState: 'active',
     width: 800,
     height: 600,
     webPreferences: {
@@ -23,7 +26,7 @@ function createWindow() {
   // Open the DevTools.
   if (isDev) {
     mainWindow.loadURL('http://localhost:5173');
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
   } else {
     // mainWindow.removeMenu();
     mainWindow.loadFile(path.join(__dirname, 'build', 'index.html'));
