@@ -1,5 +1,6 @@
 import { SetStateAction, useCallback, useState } from 'react'
-import Editor from './Editor'
+import Editor from './editor'
+import Preview from './preview'
 import './App.css'
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     setDoc(newDoc)
   }, [])
   return (
-    <div className="App">
+    <div className="app">
       <Editor onChange={handleDocChange} initialDoc={doc}/>
+      <Preview doc={doc}/>
     </div>
   )
 }

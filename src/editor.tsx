@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect} from "react";
 import codeMirrorImpl from "./CodeMirrorImpl";
-import './Editor.css'
+import './editor.css'
 
 interface Props{
     initialDoc: string,

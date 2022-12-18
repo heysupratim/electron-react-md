@@ -14,9 +14,7 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     visualEffectState: 'active',
     width: 800,
-    transparent:true,
     height: 600,
-    backgroundColor: '#CC000000',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
