@@ -6,8 +6,39 @@ import { history, historyKeymap } from "@codemirror/commands"
 import { indentOnInput } from "@codemirror/language"
 import { bracketMatching } from "@codemirror/language"
 import { lineNumbers, highlightActiveLineGutter } from "@codemirror/view"
-import {syntaxHighlighting, defaultHighlightStyle } from "@codemirror/language"
+import { tags } from "@lezer/highlight"
+import {syntaxHighlighting, HighlightStyle} from "@codemirror/language"
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown"
+import { languages } from "@codemirror/language-data"
+import { oneDark } from "@codemirror/theme-one-dark"
 import { javascript } from "@codemirror/lang-javascript"
+
+
+export const transparentTheme = EditorView.theme({
+    '&': {
+        backgroundColor: 'transparent !important',
+        height: '100%'
+    },
+})
+
+const customHighlighting = HighlightStyle.define([
+    {
+        tag: tags.heading1,
+        fontSize: '1.6em',
+        fontWeight: 'bold'
+    },
+    {
+        tag: tags.heading2,
+        fontSize: '1.4em',
+        fontWeight: 'bold'
+    },
+    {
+        tag: tags.heading3,
+        fontSize: '1.2em',
+        fontWeight: 'bold'
+    }
+])
+
 import type React from "react"
 
 interface Props {
@@ -33,9 +64,15 @@ const codeMirrorImpl = <T extends Element>(
                 history(),
                 indentOnInput(),
                 bracketMatching(),
-                syntaxHighlighting(defaultHighlightStyle),
+                syntaxHighlighting(customHighlighting),
                 highlightActiveLine(),
-                javascript(),
+                markdown({
+                    base: markdownLanguage,
+                    codeLanguages: languages,
+                    addKeymap: true
+                }),
+                oneDark,
+                transparentTheme,
                 EditorView.lineWrapping,
                 EditorView.updateListener.of(update => {
                     if(update.changes){
