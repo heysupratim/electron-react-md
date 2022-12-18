@@ -7,5 +7,8 @@ export default defineConfig({
   build: {
     outDir: 'app/build',
   },
+  optimizeDeps: {
+    exclude: ['@codemirror/state'],
+},
   plugins: [react()],
 })
