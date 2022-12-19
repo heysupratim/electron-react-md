@@ -1,9 +1,9 @@
 {
-  "name": "react-ts-electron-vite",
+  "name": "electronreactmd",
   "private": true,
   "version": "0.0.0",
   "main": "app/index.js",
-  "description": "Boilerplate Electron Forge + Vite + React + Typescript",
+  "description": "Boilerplate Electron Markdown Edit and Preview with Forge + Vite + React + Typescript + Remark + Rehype",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -k 'vite' 'yarn electron-forge:dev'",

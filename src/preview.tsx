@@ -5,9 +5,9 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import remarkGfm from "remark-gfm";
 import rehypeReact from "rehype-react";
-import './preview.css'
 import rehypeHighlight from "rehype-highlight";
 import 'highlight.js/styles/github-dark.css'
+import './preview.css'
 import 'github-markdown-css'
 
 interface Props {
