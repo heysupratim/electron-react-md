@@ -1,6 +1,6 @@
 ### Electron React MD
 
-[App Preview](/public/app-preview.png)
+![App Preview](/public/app-preview.png)
 
 This is a boilerplate project consisting the following 
 
