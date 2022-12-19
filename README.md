@@ -1,5 +1,7 @@
 ### Electron React MD
 
+[App Preview](/public/app-preview.png)
+
 This is a boilerplate project consisting the following 
 
 1. [codemirror](https://codemirror.net/) for markdown editing pane
