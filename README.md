@@ -1,4 +1,4 @@
-### Electron React MD
+### Electron React Markdown Edit and Preview
 
 ![App Preview](/public/app-preview.png)
 
